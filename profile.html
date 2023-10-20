@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:url('pb.jpg');
+        }
+
+        header {
+            background-image:url('bb.jpg');
+            color:blue;
+            text-align: center;
+			font-family:following,elephant;
+            padding:1rem;
+            position: relative; 
+        }
+
+        .header-content h1 {
+            font-size:2.5rem;
+        }
+
+        .profile-picture {
+            width: 150px; 
+            height:150px;
+            border-radius: 75%; 
+            object-fit: cover; 
+            position: absolute; 
+            top: 15px; 
+            left: 75px; 
+        }
+		
+        nav {
+            background-color:red;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+			font-size:1cm;
+            color: #fff;
+			font-family:elephant;
+        }
+			 
+        .section-content {
+            background-color:khaki;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+		.section-content h2{
+			color:blue;
+			font-family:"ALGERIAN";
+			font-size:1cm;
+			text-align:center;
+		}
+		}
+        .download-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            align-self: center;
+        }
+
+        .download-button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color:red;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="girl.jpg" alt="Your Profile Picture" class="profile-picture">
+            <h1>Elavarasi E</h1>
+            <p>Bsc.Computer Science (Computer Student)</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+		<div style="font-size:40px;font-family:italic;color:orange">
+            <ul>
+			<li>I'm a computer student Final Year.</li>
+			<li>I have little experience with several programming languages including,
+				c,c++,java,Mysql.</li>
+			<li>I'm particularly interested in cloud based project with help of team and staffs.</li>
+			</ul>
+		</div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+			<div style="font-size:40px;font-family:italic;color:orange">
+			<ul>
+            <li>Thiruvallur University - 1st year,3rd semester</li>
+			<li>Annamalai University - 4th semester,3rd year</li>
+			</ul>
+			</div>
+            <h2>Advance Education</h2>
+			<div style="font-size:40px;font-family:italic;color:orange">
+			<ul>
+			<li>Annamalai University  - Microsoft Office</li>
+            <li>Annamalai University  - Front-end development</li>
+			</ul>
+			</div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+			<div style="font-size:40px;font-family:italic;color:orange">
+            <ul>
+                <li>Wed Development</li>
+                <li>Debugging</li>
+                <li>MS Office</li>
+                <li>Presentation Slideshows</li>
+            </ul>
+			</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Web Based Projects</h2>
+			<div style="font-size:40px;font-family:italic;color:orange">
+            <ul>
+                <li><a href="first.html">Html based few Tags and Attributes</a></li>
+                <li><a href="toy.html">Toy</a></li>
+				<li><a href="house.html">T,S,C</a></li>
+            </ul>
+		</div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content">
+		<center>
+            <h2>Resume</h2>
+			<div style="font-size:40px;font-family:italic;color:orange">
+            <a href="card.html" target="_blank" class="download-button">Download card </a>
+			</div>
+		</center>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2023 ELAVARASI E</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
